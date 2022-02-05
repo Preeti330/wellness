@@ -1,0 +1,55 @@
+
+function showmenu1(){
+alert("hhhhhhhhhhh");
+var chd=document.getElementById("CHD");
+console.log(chd);
+alert("helllllllll");
+}
+
+function bookapp(){
+    alert("yeah ....you are on path");
+   var whc= document.getElementById("whc");
+   localStorage.setItem("email", whc.value);
+   //window.location = "aa.html"; 
+   alert("yessss ,,,s");
+   
+}
+
+function winn(anchor) {
+    var value1 = anchor.getAttribute('value');  // This give you '2'
+    alert("val:"+value1);
+    var html = anchor.innerHTML;  // This give you 'Team 2'
+    var html2 = value1.innerHTML;
+  // document.getElementById("pick").innerHTML = value;
+
+  /*get value using by name 
+     alert(document.getElementsByName("pr"));
+      var price=document.getElementsByName("pr").value;
+
+     alert("price"+price);
+*/
+   // alert("using session ....");
+  //  var testArray = [value1, price, "Shoe"];
+
+
+  //get value using tagname 
+ /* var a=document.getElementsByTagName(p);
+  console("hello");
+  alert("helooooooooo");
+  console.log(a[0].getAttribute("value")); 
+*/
+
+
+  var testArray=[];
+   testArray.push(value1);
+   testArray.push(price);
+    sessionStorage.setItem("items", JSON.stringify(testArray));
+
+    //use this if u get any confusion on above 
+ //  sessionStorage.setItem("try",value);
+ //sessionStorage.setItem("tryy",price);
+//   alert("value stored ........");
+   
+   window.location.href = "aa.html";
+
+}

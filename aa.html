@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       
+        <link rel="stylesheet" href="from.css">
+       
+    </head>
+<body>
+<section class="finishh">
+    <table  class="left" style="width:70%" >
+        <h1>Enter Your Information For Booking </h1>
+    <form action=" " method=" ">
+        <div class="formdiv">
+            <tr>
+                <th> <label for="fname">Name:</label></th>
+                <td><input type="text" id="fname" name="fname" placeholder="Enter Your Name " class="formbut"></td><br><br>
+            </tr>
+            <tr>
+                <th><label for="lname">Age :</label></th>
+                <td><input type="text" id="age" name="age" placeholder="Enter Your Age " class="formbut"></td><br><br>
+            </tr>
+            <tr>
+                <th><label for="gmail">Email :</label></th>
+                <td><input type="text" id="email" name="gmail" placeholder="Enter Your Email Adress" class="formbut"></td><br><br>
+            </tr>
+            <tr>
+                <th><label for="mobno">Mob No :</label></th>
+                <td><input type="text" id="mobno" name="mobno" placeholder="Enter Mobile Number" class="formbut"></td><br><br>
+            </tr>
+
+            <tr>
+                <th><label for="mobno">Service  :</label></th>
+                <td id="result"></td>
+            </tr>
+            <tr>
+             <tr>
+                <th><label for="mobno">Total Amount With Tax  </label></th>
+               <td id="price"> </td>
+             </tr>   
+                 <th></th>
+                 <td><input type="submit" value="BOOK" class="formbut1" onclick="sendmail()"></td>
+                 <td><button onclick="sendmaill()">send</button></td>
+            </tr>
+        </div>
+    </table>
+      </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    </section>
+
+</body>
+      
+    <script src="https://smtpjs.com/v3/smtp.js"></script>  
+    <script>
+       
+      /*     var storedArray = JSON.parse(sessionStorage.getItem("items"));
+           alert("try arry ");
+           console.log(storedArray );
+    
+           console.log("heloo");
+            
+            for (let i = 0; i < 2; i++) {
+                alert(i);
+                let temp=[""]; 
+                alert(storedArray);
+                temp=storedArray[i];
+                console.log("temp val:",temp);
+             //   console.log("array val:",storedArray[i]);
+
+                document.getElementById("price").innerText =temp;
+                console.log("array val :",storedArray[i-1]);
+     
+                document.getElementById("result").innerText =storedArray[i-1];
+               
+             }
+
+             */
+            var storedArray=sessionStorage.getItem("try");
+            //alert(storedArray);
+            
+            document.getElementById("price").innerText =storedArray;
+
+
+          function sendmail(){
+            alert("sending mail .....");
+            let feild1=document.getElementById('fname');
+            let feild2=document.getElementById('age');
+            let feild3=document.getElementById('email');
+            let feild4=document.getElementById('mobno');
+           
+            var a1=feild1.value;
+            var a2=feild2.value;
+            var a3=feild3.value;
+            var a4=feild4.value;
+
+            console.log('Name :',feild1.value);
+            console.log('Age :',a2);
+            console.log('Email :',a3);
+            console.log('Mob No :',a4);
+            console.log(storedArray);
+            let e12="Booking For Service";
+            console.log('.....sending mail...');
+            let arrayy=[""];
+            arrayy.push("YOU BOOKED SERVICE  <br><br><br>");
+           // arrayy.push(" <br><br>");
+            arrayy.push("Name: ",a1,"<br>");
+          //  arrayy.push("<br><br> ");
+            arrayy.push("Age :",a2,"<br>");
+           // arrayy.push("<br><br> ");
+            arrayy.push("Email :",a3,"<br>");
+            
+            arrayy.push("MOb Num :",a4,"<br>");
+            arrayy.push("YOur Booked Service :",storedArray,"<br> ");
+           // arrayy.push("Thank You .....");           
+
+          //  arrayy.push(storedArray);
+
+         
+            Email.send({
+              //  alert("yess");
+                Host: "smtp.gmail.com",
+                Username : "preetireddy0806@gmail.com",
+                Password : "tiyjmdsbeyyppdgx",
+                To : 'preetireddy0806@gmail.com',
+                From : `${a3}`,
+                Subject : `${feild2.value}`,
+                Body : `${arrayy }`,
+            })
+            .then(function(message){
+                alert("mail sent successfully");
+                console.log('preeti Send message ',message);
+            });
+            alert("Thank You ....!!!");
+          
+        }
+
+
+
+        </script>
+
+</html>

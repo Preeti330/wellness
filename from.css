@@ -1,0 +1,70 @@
+
+
+
+  .finishh{
+    padding-top: 2%;
+    height: auto;
+    width: 100%;
+    height: 100vh;
+    background:rgb(248, 193, 193);
+    text-align: justify;
+  }
+
+  h1{
+    text-align: center;
+    transform: translate(-50,-50); 
+  }
+
+form { 
+    display: block;
+    margin: top 0;;
+    align-items: left;
+    display: flexbox;
+    padding-top:0%;
+  }
+
+  input {
+    width: 50%;
+  }
+
+  label{
+      font: size 2px;
+      font-weight: 400;
+      font-style: italic;
+  }
+
+  .formdiv{
+      display:inline-table;
+      text-align: justify;
+      border: solid 1px black;
+      margin-top: 0%;
+      
+  }
+
+table{
+    align-items: left;
+}  
+
+th, td {
+    padding: 10px;
+    align :center-left;
+    
+  }
+
+.formbut{
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 10px 24px;
+    width:50%;
+    height:30px
+}
+
+.formbut1{
+    border-radius: 30%;
+    cursor: pointer;
+    padding: 10px 24px;
+    width:30%;
+    height:40px;
+}
+  
+  
