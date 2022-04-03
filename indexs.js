@@ -1,7 +1,7 @@
 
 var NavLinkss=document.getElementById("NavLinkss");
 /*display menu by using right 0 and hide after clicking on close icon using  right -200px */
-function showmenu(){
+/*function showmenu(){
     alert("yeah ....you are on path")
     NavLinkss.style.right="0";
 }
@@ -9,7 +9,7 @@ function showmenu(){
 function hidemenu(){
     NavLinkss.style.right="-200px";
 }
-
+*/
 
 
 var NavLinks2=document.getElementById("NavLinks2");
@@ -25,7 +25,9 @@ function HideMenu(){
 }
 
 
-
+function clickAboveService(){
+  alert("Please,Select Above Service .....!!!");
+}
 
 
 function here(){
@@ -50,11 +52,9 @@ function here(){
        testArray.push(v2);
         sessionStorage.setItem("items", JSON.stringify(testArray));
         alert("done");
-    
-   // window.location.href = "aa.html"; 
     }
 
-    function winn(anchor) {
+    function  bookServices(anchor) {
       var value1 = anchor.getAttribute('value');  // This give you '2'
       //alert("val:"+value1);
       var html = anchor.innerHTML;  // This give you 'Team 2'
@@ -92,6 +92,3 @@ function here(){
      window.location.href = "aa.html";
   
   }
-function abo(){
-  alert("Please,Click Above To Select Service");
-}
